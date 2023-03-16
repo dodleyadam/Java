@@ -1,19 +1,32 @@
 package codeSource;
 
-public class Case {
-    public static Fichier fichier;
+public  class Case {
     private String nomJoueurs;
     private int numeroDeCase;
     private String conditionDeJeu;
-
     private int destination;
-    public Case(String nomJoueurs, int destination,int numeroDeCase,String conditionDeJeu) {
-        this.nomJoueurs = nomJoueurs;
+
+
+    /**
+     * Ce constructeur prend en parametre les elements composant la case, c'est-a-dire: nom des joueurs,la destination
+     * les numeros de cases et les condtions de jeu
+     * @param nomJoueurs
+     * @param destination
+     * @param numeroDeCase
+     * @param conditionDeJeu
+     */
+    public Case(String nomJoueurs, int destination, int numeroDeCase, String conditionDeJeu) {
+        this.nomJoueurs=   nomJoueurs ;
         this.numeroDeCase= numeroDeCase;
         this.conditionDeJeu = conditionDeJeu;
         this.destination = destination;
+
     }
 
+    /**
+     * Cette methode retourne le numero de case
+     * @return
+     */
     public int getNumeroDeCase() {
 
         return numeroDeCase;
@@ -45,5 +58,12 @@ public class Case {
 
     public void setDestination(int destination) {
         this.destination = destination;
+    }
+
+    @Override
+    public
+    String toString() {
+        return "Case numero: "+numeroDeCase+" condition:"+conditionDeJeu +" Destination: "+destination
+                +" nom du joueur: "+nomJoueurs;
     }
 }
